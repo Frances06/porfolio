@@ -62,9 +62,36 @@ nav ul li a.active {
     transition: opacity 0.2s ease;
 }
 
-/* RESPONSIVE NAV BAR (HAMBURGER ICON) */
-@media screen and (max-width: 500px) {
+/* FOOTER */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #885a5a;
+    color: #fcf5d2;
+    text-align: center;
+}
 
+footer a {
+    color: #fcf5d2;
+}
+
+footer .contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* space between email + phone */
+    align-items: center;
+}
+
+footer hr {
+    border: 0.5px solid #fcf5d2;
+    margin: 10px auto;
+    width: 90%;
+}
+
+@media screen and (max-width: 500px) {
+    /* RESPONSIVE NAV BAR (HAMBURGER ICON) */
     .topnav ul li:not(:first-child) {
         display: none;
     }
@@ -85,7 +112,6 @@ nav ul li a.active {
         max-height: 500px;
     }
 
-    /* FIXED: override floats properly */
     .topnav.responsive ul li:not(.icon) {
         float: none;
         display: block;
@@ -95,7 +121,7 @@ nav ul li a.active {
         border-bottom: 0.5px solid #fcf5d2;
     }
 
-    /* ⭐ FIX: keep icon at top-right */
+    /* Keep icon at top-right */
     .topnav.responsive ul li.icon {
         position: absolute;
         right: 0;
@@ -109,5 +135,11 @@ nav ul li a.active {
 
     .topnav.responsive .fa-times {
         display: inline-block;
+    }
+
+    /* RESPONSIVE FOOTER */
+    footer .contact-info {
+        flex-direction: column;
+        gap: 10px;
     }
 }
