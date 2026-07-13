@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fcf5d2;
+    color: #111111;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAV BAR */
+h2, p {
+    margin: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #150218;
+}
+
+nav ul li:not(.about):not(.icon) {
+    float: left;
+    border-right: 0.5px solid #fcf5d2;
+}
+
+nav ul li.about, nav ul li.icon {
+    float: right;
+    border-left: 0.5px solid #fcf5d2;
+}
+
+nav ul li a {
+    display: block;
+    color: #fcf5d2;
+    font-family: "Titan One", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover:not(.active) {
+    background-color: #492D2D;
+}
+
+nav ul li a.active {
+    background-color: #885a5a;
+}
+
+/* HAMURGER ICON */
+.topnav ul li.icon {
+    display: none;
+}
+
+.icon .fa-bars {
+    display: inline-block;
+    transition: opacity 0.2s ease;
+}
+
+.icon .fa-times {
+    display: none;
+    transition: opacity 0.2s ease;
+}
+
+/* RESPONSIVE NAV BAR (HAMBURGER ICON) */
+@media screen and (max-width: 500px) {
+
+    .topnav ul li:not(:first-child) {
+        display: none;
+    }
+
+    .topnav ul li.icon {
+        float: right;
+        display: block;
+    }
+
+    .topnav.responsive ul {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease-out;
+        position: relative;
+    }
+
+    .topnav.responsive.open ul {
+        max-height: 500px;
+    }
+
+    /* FIXED: override floats properly */
+    .topnav.responsive ul li:not(.icon) {
+        float: none;
+        display: block;
+        text-align: left;
+        border-right: none;
+        border-left: none;
+        border-bottom: 0.5px solid #fcf5d2;
+    }
+
+    /* ⭐ FIX: keep icon at top-right */
+    .topnav.responsive ul li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    /* Hamburger morph */
+    .topnav.responsive .fa-bars {
+        display: none;
+    }
+
+    .topnav.responsive .fa-times {
+        display: inline-block;
+    }
+}
