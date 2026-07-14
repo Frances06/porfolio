@@ -105,6 +105,10 @@ footer hr {
 .welcome {
     text-align: center;
     margin-top: 42px;
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Horizontal center */
+    align-items: center; /* Vertical center */
 }
 
 /* Fade-in for H1 */
@@ -128,25 +132,51 @@ footer hr {
     border-right: 2px solid #492D2D; /* cursor */
     white-space: nowrap;
     overflow: hidden;
+    padding-bottom: 50px;
 }
 
+/* BUTTON */
 .button {
-  display: block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  background-color: #04AA6D;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+    font-family: "Jersey 15", cursive;
+    display: block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #ff5d2c;
+    background-color: #ffe455;
+    border: 2px solid #ffb13a;
+    border-radius: 15px;
+    box-shadow: 0 9px #ff5d2c;
 }
 
 .button:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+    box-shadow: 0 5px #bd3813;
+    transform: translateY(4px);
+}
+
+.button span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 @media screen and (max-width: 500px) {
