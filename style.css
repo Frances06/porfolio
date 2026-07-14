@@ -76,7 +76,7 @@ nav ul li a.active {
 
 /* FOOTER */
 footer {
-    /*position: fixed;*/
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -137,7 +137,7 @@ footer hr {
 }
 
 /* Typewriter base styling */
-#typed-text {
+.typewriter {
     font-family: "Jersey 15", cursive;
     font-size: 40px;
     color: #492D2D;

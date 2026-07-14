@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Jersey+15&family=Titan+One&display=swap" rel="stylesheet">
+    <title>Home | My Portfolio</title>
+</head>
+<body>
+
+    <nav class="topnav" id="myTopNav">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="about"><a href="about.html" class="active">About</a></li>
+
+            <!-- Hamburger icon -->
+            <li class="icon">
+                <a href="javascript:void(0);" onclick="navBar()">
+                    <i class="fa fa-bars"></i>
+                    <i class="fa fa-times"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1 id="about" class="typewriter"></h1>
+        <p class="fade-in">
+            Hi, I'm Frances.<br> I'm a student at the University of Dundee, currently pursuing a degree in 
+            Computer Science. I have a strong passion for technology and programming, and I'm always eager 
+            to learn new skills and take on exciting projects. My portfolio showcases some of my work.
+        </p>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:2713017@dundee.ac.uk">2713017@dundee.ac.uk</a>
+            </p>
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+447826623341">+44 7782 662 3341</a>
+            </p>
+        </div>
+
+        <hr>
+
+        <p>&copy; Copyright <span id="currentYear"></span> My Portfolio. All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
