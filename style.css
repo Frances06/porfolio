@@ -7,9 +7,20 @@ body {
     padding: 0;
 }
 
-/* NAV BAR */
-h2, p {
+h1, p {
     margin: 10px;
+}
+
+main {
+    padding-top: 40px;
+}
+
+/* NAV BAR */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav ul {
@@ -147,7 +158,8 @@ footer hr {
     text-align: center;
     text-decoration: none;
     color: #ff5d2c;
-    background-color: #ffe455;
+    background-color: #ffe455; /* fallback color */
+    background-image: linear-gradient(to bottom left, #ffe455, #ffaf36);
     border: 2px solid #ffb13a;
     border-radius: 15px;
     box-shadow: 0 9px #ff5d2c;
@@ -156,6 +168,10 @@ footer hr {
 .button:active {
     box-shadow: 0 5px #bd3813;
     transform: translateY(4px);
+}
+
+.button:hover {
+    background-image: linear-gradient(to top left, #ffaf36, #ffe455);
 }
 
 .button span {
