@@ -2,7 +2,7 @@ body {
     font-family: "Dongle", sans-serif;
     font-size: 24px;
     background-color: #fcf5d2;
-    color: #111111;
+    color: #492D2D;
     margin: 0;
     padding: 0;
 }
@@ -11,8 +11,14 @@ h1, p {
     margin: 10px;
 }
 
+h1:not(.welcome h1) {
+    color: #ffca58;
+    text-shadow: 2px 2px #ff5d2c;
+}
+
 main {
     padding-top: 40px;
+    margin-bottom: 300px; /* space for footer */
 }
 
 /* NAV BAR */
@@ -105,8 +111,11 @@ footer hr {
 
 .welcome {
     text-align: center;
-    margin-top: 50px;
-    padding-bottom: 60px;
+    margin-top: 42px;
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Horizontal center */
+    align-items: center; /* Vertical center */
 }
 
 .welcome h1 {
@@ -115,13 +124,9 @@ footer hr {
     color: #150218;
 }
 
-.welcome {
-    text-align: center;
-    margin-top: 42px;
-    display: flex; /* Use flexbox for centering */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Horizontal center */
-    align-items: center; /* Vertical center */
+.welcome p {
+    margin-bottom: 50px;
+    font-size: 40px;
 }
 
 /* Fade-in for H1 */
@@ -139,13 +144,10 @@ footer hr {
 /* Typewriter base styling */
 .typewriter {
     font-family: "Jersey 15", cursive;
-    font-size: 40px;
-    color: #492D2D;
     display: inline-block;
     border-right: 2px solid #492D2D; /* cursor */
     white-space: nowrap;
     overflow: hidden;
-    padding-bottom: 50px;
 }
 
 /* BUTTON */
@@ -195,6 +197,13 @@ footer hr {
 .button:hover span:after {
     opacity: 1;
     right: 0;
+}
+
+.about-me {
+    max-width: 500px;
+    margin: 50px auto 300px auto; /* space for footer */
+    padding: 20px;
+    text-align: left;
 }
 
 @media screen and (max-width: 500px) {
@@ -250,7 +259,7 @@ footer hr {
         gap: 10px;
     }
 
-    #typed-text {
+    #intro {
         font-size: 30px;
     }
 }
