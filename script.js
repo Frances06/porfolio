@@ -15,7 +15,7 @@ window.addEventListener('load', function () {
 });
 
 /* TYPING EFFECT: Type out the text in the elements with certain IDs */
-function typeWriter(elementId, text, speed = 50) {
+function typeWriter(elementId, text, speed = 40) {
     const el = document.getElementById(elementId);
     el.textContent = ""; // clear existing text
 
@@ -41,6 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (document.getElementById("about")) {
-        typeWriter("about", "About Me", 40);
+        typeWriter("about", "About Me");
+    }
+
+    if (document.getElementById("contact")) {
+        typeWriter("contact", "Contact Me");
     }
 });

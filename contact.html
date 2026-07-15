@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Jersey+15&family=Titan+One&display=swap" rel="stylesheet">
+    <title>Home | My Portfolio</title>
+</head>
+<body>
+
+    <nav class="topnav" id="myTopNav">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="about"><a href="about.html" class="active">About</a></li>
+
+            <!-- Hamburger icon -->
+            <li class="icon">
+                <a href="javascript:void(0);" onclick="navBar()">
+                    <i class="fa fa-bars"></i>
+                    <i class="fa fa-times"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="contact-me">
+        <h1 id="contact" class="typewriter"></h1>
+        <div class="fade-in">
+            <form class="flex-container contact-form" action="mailto:2713017@dundee.ac.uk" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:2713017@dundee.ac.uk">2713017@dundee.ac.uk</a>
+            </p>
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+447826623341">+44 7782 662 3341</a>
+            </p>
+        </div>
+
+        <hr>
+
+        <p>&copy; Copyright <span id="currentYear"></span> My Portfolio. All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
