@@ -206,13 +206,36 @@ footer hr {
     text-align: left;
 }
 
+.contact-me {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+#contact-details, #contact-details a {
+    background-color: #885a5a;
+    border-radius: 10px;
+    color: #fcf5d2;
+    padding: 10px;
+}
+
 .contact-form {
     margin-top: 0px;
-    border: 10px solid #885a5a;
+    border: 5px solid #885a5a;
+    border-radius: 10px;
+    width: 100%;
+    padding: 20px;
 }
 
 .contact-form input, .contact-form textarea {
-    width: 40%;
+    width: 100%;
     max-width: 480px;
     padding: 10px;
     margin-bottom: 10px;
@@ -225,6 +248,10 @@ footer hr {
 .contact-form textarea {
     height: 200px;
     resize: none;
+}
+
+.contact-form p {
+    margin: 0 auto 10px auto;
 }
 
 .contact-form label {
@@ -287,6 +314,13 @@ footer hr {
 
     #intro {
         font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .contact-info {
+        flex-direction: column;
+        text-align: center;
     }
 }
 

@@ -6,7 +6,7 @@ function navBar() {
 }
 
 /* FOOTER: Get current year and display it in the footer */
-window.addEventListener('load', function () {
+window.addEventListener("DOMContentLoaded", function () {
     function getCurrentYear() {
         var year = new Date().getFullYear();
         document.getElementById("currentYear").textContent = year;
@@ -47,4 +47,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.getElementById("contact")) {
         typeWriter("contact", "Contact Me");
     }
+});
+
+/* CONTACT FORM: Character counter for the message textarea */
+document.addEventListener("DOMContentLoaded", () => {
+    const textarea = document.getElementById("message");
+    const counter = document.getElementById("char-count");
+    const limit = 5000;
+
+    textarea.addEventListener("input", () => {
+        const length = textarea.value.length;
+        counter.textContent = `${length} / ${limit}`;
+    });
 });
