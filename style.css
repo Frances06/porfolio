@@ -14,6 +14,11 @@ h1, p {
 h1:not(.welcome h1) {
     color: #ffca58;
     text-shadow: 2px 2px #ff5d2c;
+
+    /* Ensure Bootstrap doesn't override these styles */
+    font-size: 48px;
+    font-weight: bold;
+    
 }
 
 main {
@@ -257,6 +262,16 @@ footer hr {
 .contact-form label {
     font-weight: bold;
     color: #885a5a;
+}
+
+.portfolio h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #885a5a;
+}
+
+.portfolio p {
+    color: #492D2D;
 }
 
 @media screen and (max-width: 500px) {

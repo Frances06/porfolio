@@ -40,12 +40,16 @@ document.addEventListener("DOMContentLoaded", () => {
         typeWriter("intro", "Explore my work and projects", 30);
     }
 
-    if (document.getElementById("about")) {
-        typeWriter("about", "About Me");
+    if (document.getElementById("projects")) {
+        typeWriter("projects", "My Projects");
     }
 
     if (document.getElementById("contact")) {
         typeWriter("contact", "Contact Me");
+    }
+
+    if (document.getElementById("about")) {
+        typeWriter("about", "About Me");
     }
 });
 
