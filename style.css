@@ -274,6 +274,10 @@ footer hr {
     color: #492D2D;
 }
 
+.portfolio img {
+    max-height: 155px;
+}
+
 @media screen and (max-width: 500px) {
     /* RESPONSIVE NAV BAR (HAMBURGER ICON) */
     .topnav ul li:not(:first-child) {
